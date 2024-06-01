@@ -1,5 +1,5 @@
-function App() {
-  return <main>hi</main>;
-}
+import { UsersProvider } from "./users/components/UsersProvider";
 
-export default App;
+export function App() {
+  return <UsersProvider />;
+}
