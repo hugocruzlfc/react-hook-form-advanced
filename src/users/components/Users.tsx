@@ -13,12 +13,13 @@ import { RHFRadioGroup } from "@/components/RHFRadioGroup";
 import { RHFCheckbox } from "@/components/RHFCheckbox";
 import { RHFDateTimePicker } from "@/components/RHFDateTimePicker";
 import { RHFDateRangePicker } from "@/components/RHFDateRangePicker";
+import { RHFSlider } from "@/components/RHFSlider";
+import { RHFSwitch } from "@/components/RHFSwitch";
+import { RHFTextField } from "@/components/RHFTextField";
 
 export function Users() {
-  const {
-    register,
-    formState: { errors },
-  } = useFormContext<UserSchema>();
+  const { watch, control, unregister, reset, setValue, handleSubmit } =
+    useFormContext<UserSchema>();
 
   const statesQuery = useStates();
   const languagesQuery = useLanguages();
@@ -27,17 +28,13 @@ export function Users() {
 
   return (
     <Stack sx={{ gap: 2 }}>
-      <TextField
-        {...register("name")}
+      <RHFTextField<UserSchema>
+        name="name"
         label="Name"
-        error={!!errors.name}
-        helperText={errors.name?.message}
       />
-      <TextField
-        {...register("email")}
+      <RHFTextField<UserSchema>
+        name="email"
         label="Email"
-        error={!!errors.email}
-        helperText={errors.email?.message}
       />
       <RHFAutocomplete<UserSchema>
         name="states"
@@ -64,6 +61,14 @@ export function Users() {
       />
       <Typography>Former Employment Period:</Typography>
       <RHFDateRangePicker<UserSchema> name="formerEmploymentPeriod" />
+      <RHFSlider<UserSchema>
+        name="salaryRange"
+        label="Salary Range"
+      />
+      <RHFSwitch<UserSchema>
+        name="isTeacher"
+        label="Are you teacher?"
+      />
     </Stack>
   );
 }
