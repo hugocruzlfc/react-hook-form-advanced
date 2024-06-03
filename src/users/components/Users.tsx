@@ -7,7 +7,6 @@ import {
   ListItemText,
   ListSubheader,
   Stack,
-  TextField,
   Typography,
 } from "@mui/material";
 import { UserSchema, defaultValues } from "../types/user.schema";

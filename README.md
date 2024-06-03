@@ -29,4 +29,18 @@ export default {
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
-here =>1:53
+## React Hook Form documentation
+
+- [React Hook Form](https://react-hook-form.com/get-started)
+
+## React Query documentation
+
+- [React Query](https://react-query.tanstack.com/)
+
+## Zod documentation
+
+- [Zod](https://zod.dev/)
+
+## Material UI documentation
+
+- [Material UI](https://mui.com/material-ui/getting-started/)
