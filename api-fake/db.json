@@ -59,16 +59,27 @@
     {
       "email": "james@gmail.com",
       "formerEmploymentPeriod": [
-        "Thu Jan 18 2024 01:06:58 GMT+0330 (Iran Standard Time)",
-        "Thu Jan 18 2024 01:06:58 GMT+0330 (Iran Standard Time)"
+        "Wed Jan 17 2024 22:36:58 GMT+0100 (hora estándar de Europa central)",
+        "Wed Jan 17 2024 22:36:58 GMT+0100 (hora estándar de Europa central)"
       ],
       "name": "David",
       "gender": "1",
-      "languagesSpoken": ["1", "2"],
-      "registrationDateAndTime": "Thu Jan 18 2024 01:06:58 GMT+0330 (Iran Standard Time)",
-      "salaryRange": [0, 2000],
-      "skills": ["1", "2"],
-      "states": ["1", "2"],
+      "languagesSpoken": [
+        "1",
+        "2"
+      ],
+      "registrationDateAndTime": "Wed Jan 17 2024 22:36:58 GMT+0100 (hora estándar de Europa central)",
+      "salaryRange": [
+        0,
+        2000
+      ],
+      "skills": [
+        "1",
+        "2"
+      ],
+      "states": [
+        "1"
+      ],
       "isTeacher": true,
       "students": [
         {
@@ -78,7 +89,7 @@
           "name": "2222"
         }
       ],
-      "id": 1
+      "id": "1"
     },
     {
       "email": "Robert@gmail.com",
@@ -88,11 +99,23 @@
       ],
       "name": "Robert",
       "gender": "2",
-      "languagesSpoken": ["1", "2", "3"],
+      "languagesSpoken": [
+        "1",
+        "2",
+        "3"
+      ],
       "registrationDateAndTime": "Wed Jan 07 1981 04:40:23 GMT+0330 (Iran Standard Time)",
-      "salaryRange": [67, 87],
-      "skills": ["1", "2"],
-      "states": ["3"],
+      "salaryRange": [
+        67,
+        87
+      ],
+      "skills": [
+        "1",
+        "2"
+      ],
+      "states": [
+        "3"
+      ],
       "isTeacher": true,
       "students": [
         {
@@ -105,28 +128,118 @@
           "name": "sfdsfsf"
         }
       ],
-      "id": 2
+      "id": "2"
     },
     {
       "email": "john@gmail.com",
       "formerEmploymentPeriod": [
-        "Sat Jan 20 2024 18:12:01 GMT+0330 (Iran Standard Time)",
-        "Sat Jan 20 2024 18:12:01 GMT+0330 (Iran Standard Time)"
+        "Sat Jan 20 2024 15:42:01 GMT+0100 (hora estándar de Europa central)",
+        "Sat Jan 20 2024 15:42:01 GMT+0100 (hora estándar de Europa central)"
       ],
       "name": "John",
       "gender": "1",
-      "languagesSpoken": ["1", "2"],
-      "registrationDateAndTime": "Sat Jan 20 2024 18:12:01 GMT+0330 (Iran Standard Time)",
-      "salaryRange": [0, 2000],
-      "skills": ["1", "2"],
-      "states": ["1"],
+      "languagesSpoken": [
+        "1",
+        "2"
+      ],
+      "registrationDateAndTime": "Sat Jan 20 2024 15:42:01 GMT+0100 (hora estándar de Europa central)",
+      "salaryRange": [
+        0,
+        2000
+      ],
+      "skills": [
+        "2"
+      ],
+      "states": [
+        "1",
+        "2"
+      ],
       "isTeacher": true,
       "students": [
         {
           "name": "sdsd"
         }
       ],
-      "id": 3
+      "id": "3"
+    },
+    {
+      "email": "hcruzdelatorre@gmail.com",
+      "formerEmploymentPeriod": [
+        "Mon Jun 03 2024 19:13:00 GMT+0200 (hora de verano de Europa central)",
+        "Mon Jun 03 2024 19:13:00 GMT+0200 (hora de verano de Europa central)"
+      ],
+      "name": "Hugo ",
+      "gender": "1",
+      "languagesSpoken": [],
+      "registrationDateAndTime": "Mon Jun 03 2024 19:13:00 GMT+0200 (hora de verano de Europa central)",
+      "salaryRange": [
+        42,
+        100
+      ],
+      "skills": [
+        "1",
+        "2"
+      ],
+      "states": [
+        "1"
+      ],
+      "isTeacher": true,
+      "students": [
+        {
+          "name": "Hugo Cruz de la Torres"
+        }
+      ],
+      "id": "c33e"
+    },
+    {
+      "id": "00a4",
+      "email": "hugocruzlfc@gmail.com",
+      "formerEmploymentPeriod": [
+        "Mon Jun 03 2024 19:19:39 GMT+0200 (hora de verano de Europa central)",
+        "Mon Jun 03 2024 19:19:39 GMT+0200 (hora de verano de Europa central)"
+      ],
+      "name": "Hugo Cruz de la Torres",
+      "gender": "1",
+      "languagesSpoken": [],
+      "registrationDateAndTime": "Mon Jun 03 2024 19:19:39 GMT+0200 (hora de verano de Europa central)",
+      "salaryRange": [
+        0,
+        2000
+      ],
+      "skills": [
+        "1",
+        "2"
+      ],
+      "states": [
+        "1"
+      ],
+      "isTeacher": false,
+      "students": []
+    },
+    {
+      "email": "hcruzdelatorre@gmail.com",
+      "formerEmploymentPeriod": [
+        "Mon Jun 03 2024 19:22:34 GMT+0200 (hora de verano de Europa central)",
+        "Mon Jun 03 2024 19:22:34 GMT+0200 (hora de verano de Europa central)"
+      ],
+      "name": "Hugo Cruz",
+      "gender": "1",
+      "languagesSpoken": [],
+      "registrationDateAndTime": "Mon Jun 03 2024 19:22:34 GMT+0200 (hora de verano de Europa central)",
+      "salaryRange": [
+        0,
+        2000
+      ],
+      "skills": [
+        "1",
+        "2"
+      ],
+      "states": [
+        "1"
+      ],
+      "isTeacher": false,
+      "students": [],
+      "id": "bf6d"
     }
   ]
 }

@@ -11,7 +11,12 @@ import {
   Typography,
 } from "@mui/material";
 import { UserSchema, defaultValues } from "../types/user.schema";
-import { useFieldArray, useFormContext, useWatch } from "react-hook-form";
+import {
+  SubmitHandler,
+  useFieldArray,
+  useFormContext,
+  useWatch,
+} from "react-hook-form";
 import {
   useGenders,
   useLanguages,
@@ -30,6 +35,7 @@ import { RHFSlider } from "@/components/RHFSlider";
 import { RHFSwitch } from "@/components/RHFSwitch";
 import { RHFTextField } from "@/components/RHFTextField";
 import { Fragment, useEffect } from "react";
+import { useCreateUser, useEditUser } from "../services/mutations";
 
 export function Users() {
   const { control, unregister, reset, setValue, handleSubmit } =
@@ -73,21 +79,22 @@ export function Users() {
     reset(defaultValues);
   };
 
-  // const createUserMutation = useCreateUser();
-  // const editUserMutation = useEditUser();
+  const createUserMutation = useCreateUser();
+  const editUserMutation = useEditUser();
 
-  // const onSubmit: SubmitHandler<Schema> = (data) => {
-  //   if (variant === "create") {
-  //     createUserMutation.mutate(data);
-  //   } else {
-  //     editUserMutation.mutate(data);
-  //   }
-  //};
+  const onSubmit: SubmitHandler<UserSchema> = (data) => {
+    if (variant === "create") {
+      createUserMutation.mutate(data);
+    } else {
+      editUserMutation.mutate(data);
+    }
+  };
 
   return (
     <Container
       maxWidth="sm"
       component="form"
+      onSubmit={handleSubmit(onSubmit)}
     >
       <Stack sx={{ flexDirection: "row", gap: 2 }}>
         <List subheader={<ListSubheader>Users</ListSubheader>}>

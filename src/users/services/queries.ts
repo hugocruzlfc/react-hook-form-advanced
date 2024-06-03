@@ -50,7 +50,7 @@ export function useUsers() {
     queryFn: (): Promise<Option[]> =>
       axios.get<ApiGet[]>("http://localhost:8080/users").then((response) =>
         response.data.map((user) => ({
-          id: user.id.toString(),
+          id: user.id,
           label: user.name,
         }))
       ),
@@ -67,7 +67,7 @@ export function useUser(id: string) {
 
       return {
         variant: "edit",
-        id: data.id.toString(),
+        id: data.id,
         name: data.name,
         email: data.email,
         formerEmploymentPeriod: [

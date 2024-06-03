@@ -1,5 +1,5 @@
 import axios from "axios";
-import omit from "lodash/omit";
+import { omit } from "lodash";
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 

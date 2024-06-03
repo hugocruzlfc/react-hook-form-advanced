@@ -4,7 +4,7 @@ type Create = {
 
 type Edit = {
   variant: "edit";
-  id: number;
+  id: string;
 };
 
 export type Common = {
