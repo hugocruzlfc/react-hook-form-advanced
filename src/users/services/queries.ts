@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Option } from "@/types/option.type";
+import { UserSchema } from "../types/user.schema";
+import { ApiGet } from "../types/api.schema";
 
 export function useStates() {
   return useQuery({
@@ -39,5 +41,49 @@ export function useSkills() {
       axios
         .get<Option[]>("http://localhost:8080/skills")
         .then((res) => res.data),
+  });
+}
+
+export function useUsers() {
+  return useQuery({
+    queryKey: ["users"],
+    queryFn: (): Promise<Option[]> =>
+      axios.get<ApiGet[]>("http://localhost:8080/users").then((response) =>
+        response.data.map((user) => ({
+          id: user.id.toString(),
+          label: user.name,
+        }))
+      ),
+  });
+}
+
+export function useUser(id: string) {
+  return useQuery({
+    queryKey: ["user", { id }],
+    queryFn: async (): Promise<UserSchema> => {
+      const { data } = await axios.get<ApiGet>(
+        `http://localhost:8080/users/${id}`
+      );
+
+      return {
+        variant: "edit",
+        id: data.id.toString(),
+        name: data.name,
+        email: data.email,
+        formerEmploymentPeriod: [
+          new Date(data.formerEmploymentPeriod[0]),
+          new Date(data.formerEmploymentPeriod[1]),
+        ],
+        gender: data.gender,
+        languagesSpoken: data.languagesSpoken,
+        registrationDateAndTime: new Date(data.registrationDateAndTime),
+        salaryRange: [data.salaryRange[0], data.salaryRange[1]],
+        skills: data.skills,
+        states: data.states,
+        students: data.students,
+        isTeacher: data.isTeacher,
+      };
+    },
+    enabled: !!id,
   });
 }
